@@ -1,12 +1,13 @@
+# music
+
 ## beat
 
-`beat (bang)`
+`bang` beat
 
 # interfaces
 
 ## organ pedals
 
-```
-inputkey (int)
-currentkey (symbol)
-```
+‘int’ inputkey
+
+‘symbol’ currentkey
