@@ -1,13 +1,29 @@
+# geometry
+===
 # music
+===
+# apps
+===
 
-## beat
-
+# beat
+### returns
 `bang` beat
 
-# interfaces
+# phrasing
+### returns
+`bang` downbeat, downmeasure, downphrase
+`int` beat_position, measure_position, phrase_position
+`int` beat_number, measure_number, phrase_number
 
-## organ pedals
+### responds to
+beat
+PULSE_RESET
+MASTER_RESET
 
+# interface: organ pedal
+### returns
 ‘int’ inputkey
+‘string’ currentkey
 
-‘symbol’ currentkey
+### responds to
+keyboard input, alphabetical: "A"-"K"
