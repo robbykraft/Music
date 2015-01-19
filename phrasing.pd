@@ -1,4 +1,4 @@
-#N canvas 773 67 450 332 10;
+#N canvas 2 352 450 332 10;
 #X obj 8 -5 bng 50 150 50 0 empty downbeat empty 17 7 0 10 -262144
 -1 -1;
 #N canvas 102 155 596 431 guts 0;
@@ -130,7 +130,7 @@ empty 0 -8 0 10 -262144 -1 -1 0;
 #X obj 6 69 cnv 15 200 16 empty empty empty 20 12 0 14 -1 -66577 0
 ;
 #X obj 65 132 hradio 15 1 0 8 _measure_radio_input _r_measure_radio_input
-empty 0 -8 0 10 -262144 -1 -1 0;
+empty 0 -8 0 10 -262144 -1 -1 4;
 #X text 69 115 2 3;
 #X text 99 115 4 5;
 #X text 130 115 6 7;
@@ -148,11 +148,11 @@ empty 0 -8 0 10 -262144 -1 -1 0;
 #X obj 6 189 cnv 15 200 16 empty empty empty 20 12 0 14 -1 -66577 0
 ;
 #X obj 215 185 hradio 100 1 0 2 empty _r_phrase empty 0 -8 0 10 -262144
--1 -1 1;
-#X obj 215 85 hradio 100 1 0 2 empty _r_measure empty 0 -8 0 10 -262144
 -1 -1 0;
+#X obj 215 85 hradio 33 1 0 6 empty _r_measure empty 0 -8 0 10 -262144
+-1 -1 5;
 #X obj 215 -14 hradio 100 1 0 2 empty _r_beat empty 0 -8 0 10 -262144
--1 -1 1;
+-1 -1 0;
 #X floatatom 67 48 1 0 0 0 - beat_position NULL2gj3if93;
 #X floatatom 67 169 1 0 0 0 - measure_position NULL2gj3if93;
 #X floatatom 70 280 1 0 0 0 - phrase_position NULL2gj3if93;

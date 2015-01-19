@@ -1,4 +1,4 @@
-#N canvas 502 209 450 300 10;
+#N canvas 61 392 450 300 10;
 #N canvas 729 386 450 300 guts 0;
 #X floatatom 14 55 5 0 0 0 - - -;
 #X obj 17 115 keyup;
@@ -981,5 +981,5 @@
 0;
 #X obj 230 34 cnv 15 30 120 empty cnv_g empty 20 12 0 14 -33289 -262144
 0;
-#X obj 189 251 cnv 15 48 48 empty cnv_note_name E 20 12 0 50 -262144
+#X obj 189 251 cnv 15 48 48 empty cnv_note_name Gb 20 12 0 50 -262144
 -66577 0;
