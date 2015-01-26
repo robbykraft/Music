@@ -1,63 +1,64 @@
-#N canvas 2 352 450 332 10;
+#N canvas 18 334 450 332 10;
 #X obj 8 -5 bng 50 150 50 0 empty downbeat empty 17 7 0 10 -262144
 -1 -1;
-#N canvas 102 155 596 431 guts 0;
-#X obj 35 90 i;
-#X obj 61 90 + 1;
-#X floatatom 28 115 5 0 0 0 - - -;
-#X msg 50 70 0;
-#X obj 67 134 sel 0;
-#X obj 94 77 + 2;
-#X msg 182 102 number \$1;
-#X msg 127 99 size \$1;
-#X obj 127 78 expr 200 / $f1;
-#X obj 36 52 r beat;
-#X obj 32 155 s downbeat;
-#X obj 359 108 sel 0;
-#X obj 398 48 + 2;
-#X msg 459 96 number \$1;
-#X msg 397 91 size \$1;
-#X obj 397 70 expr 200 / $f1;
-#X obj 353 134 s downmeasure;
-#X obj 67 112 %;
-#X obj 359 88 %;
-#X obj 324 67 i;
-#X obj 350 67 + 1;
-#X floatatom 321 91 5 0 0 0 - - -;
-#X msg 339 47 0;
-#X obj 325 29 r downbeat;
-#X obj 76 317 sel 0;
-#X obj 115 257 + 2;
-#X msg 181 316 number \$1;
-#X msg 114 307 size \$1;
-#X obj 114 286 expr 200 / $f1;
-#X obj 116 236 r _phrase_radio_input;
-#X obj 138 335 s _r_phrase;
-#X obj 76 297 %;
-#X obj 41 276 i;
-#X obj 67 276 + 1;
-#X floatatom 38 300 5 0 0 0 - - -;
-#X msg 56 256 0;
-#X obj 25 236 r downmeasure;
-#X obj 32 342 s downphrase;
-#X obj 103 154 s _r_beat;
-#X obj 101 57 r _beat_radio_input;
-#X obj 443 137 s _r_measure;
-#X obj 399 27 r _measure_radio_input;
-#X obj 352 231 loadbang;
-#X msg 377 252 \; _r_beat_radio_input 1 \; _r_measure_radio_input 2
+#N canvas 501 221 596 431 guts 1;
+#X obj 59 63 i;
+#X obj 85 63 + 1;
+#X floatatom 52 88 5 0 0 0 - - -;
+#X msg 74 43 0;
+#X obj 91 107 sel 0;
+#X obj 118 50 + 2;
+#X msg 206 75 number \$1;
+#X msg 151 72 size \$1;
+#X obj 151 51 expr 200 / $f1;
+#X obj 60 25 r beat;
+#X obj 56 128 s downbeat;
+#X obj 387 98 sel 0;
+#X obj 426 38 + 2;
+#X msg 487 86 number \$1;
+#X msg 425 81 size \$1;
+#X obj 425 60 expr 200 / $f1;
+#X obj 381 124 s downmeasure;
+#X obj 91 85 %;
+#X obj 387 78 %;
+#X obj 352 57 i;
+#X obj 378 57 + 1;
+#X floatatom 349 81 5 0 0 0 - - -;
+#X msg 367 37 0;
+#X obj 353 19 r downbeat;
+#X obj 89 330 sel 0;
+#X obj 128 270 + 2;
+#X msg 194 329 number \$1;
+#X msg 127 320 size \$1;
+#X obj 127 299 expr 200 / $f1;
+#X obj 129 249 r _phrase_radio_input;
+#X obj 151 348 s _r_phrase;
+#X obj 89 310 %;
+#X obj 54 285 i;
+#X obj 80 289 + 1;
+#X floatatom 51 313 5 0 0 0 - - -;
+#X msg 69 269 0;
+#X obj 38 249 r downmeasure;
+#X obj 45 355 s downphrase;
+#X obj 127 127 s _r_beat;
+#X obj 125 30 r _beat_radio_input;
+#X obj 471 127 s _r_measure;
+#X obj 427 17 r _measure_radio_input;
+#X obj 368 249 loadbang;
+#X msg 393 270 \; _r_beat_radio_input 1 \; _r_measure_radio_input 2
 \; _r_phrase_radio_input 3 \;;
-#X obj 312 272 delay 300;
-#X msg 333 313 \; _r_beat_radio_input 0 \; _r_measure_radio_input 0
+#X obj 328 290 delay 300;
+#X msg 349 331 \; _r_beat_radio_input 0 \; _r_measure_radio_input 0
 \; _r_phrase_radio_input 0 \;;
-#X obj 67 11 r BEAT_RESET;
-#X obj 155 11 r MASTER_RESET;
-#X obj 176 154 s beat_number;
-#X obj 420 162 s measure_number;
-#X obj 140 371 s phrase_number;
-#X obj 12 179 s beat_position;
-#X obj 296 162 s measure_position;
-#X obj 13 375 s phrase_position;
+#X obj 259 186 r BEAT_RESET;
+#X obj 259 205 r MASTER_RESET;
+#X obj 200 127 s beat_number;
+#X obj 448 152 s measure_number;
+#X obj 153 384 s phrase_number;
+#X obj 36 152 s beat_position;
+#X obj 324 152 s measure_position;
+#X obj 26 388 s phrase_position;
+#X msg 36 44 bang;
 #X connect 0 0 1 0;
 #X connect 0 0 2 0;
 #X connect 0 0 17 0;
@@ -71,7 +72,7 @@
 #X connect 6 0 38 0;
 #X connect 7 0 38 0;
 #X connect 8 0 7 0;
-#X connect 9 0 0 0;
+#X connect 9 0 54 0;
 #X connect 11 0 16 0;
 #X connect 12 0 13 0;
 #X connect 12 0 15 0;
@@ -120,39 +121,40 @@
 #X connect 47 0 3 0;
 #X connect 47 0 22 0;
 #X connect 47 0 35 0;
+#X connect 54 0 0 0;
 #X restore 160 205 pd guts;
-#X obj 64 18 hradio 15 1 0 8 _beat_radio_input _r_beat_radio_input
+#X obj 73 15 hradio 15 1 0 8 _beat_radio_input _r_beat_radio_input
 empty 0 -8 0 10 -262144 -1 -1 0;
-#X text 68 1 2 3;
-#X text 98 1 4 5;
-#X text 129 1 6 7;
-#X text 159 1 8 9;
+#X text 77 -2 2 3;
+#X text 107 -2 4 5;
+#X text 138 -2 6 7;
+#X text 168 -2 8 9;
 #X obj 6 69 cnv 15 200 16 empty empty empty 20 12 0 14 -1 -66577 0
 ;
-#X obj 65 132 hradio 15 1 0 8 _measure_radio_input _r_measure_radio_input
-empty 0 -8 0 10 -262144 -1 -1 4;
-#X text 69 115 2 3;
-#X text 99 115 4 5;
-#X text 130 115 6 7;
-#X text 160 115 8 9;
+#X obj 73 135 hradio 15 1 0 8 _measure_radio_input _r_measure_radio_input
+empty 0 -8 0 10 -262144 -1 -1 0;
+#X text 77 118 2 3;
+#X text 107 118 4 5;
+#X text 138 118 6 7;
+#X text 168 118 8 9;
 #X obj 8 111 bng 50 150 50 0 empty downmeasure empty 17 7 0 10 -262144
 -1 -1;
-#X obj 67 251 hradio 15 1 0 8 _phrase_radio_input _r_phrase_radio_input
+#X obj 75 251 hradio 15 1 0 8 _phrase_radio_input _r_phrase_radio_input
 empty 0 -8 0 10 -262144 -1 -1 0;
-#X text 71 234 2 3;
-#X text 101 234 4 5;
-#X text 132 234 6 7;
-#X text 162 234 8 9;
+#X text 79 234 2 3;
+#X text 109 234 4 5;
+#X text 140 234 6 7;
+#X text 170 234 8 9;
 #X obj 9 229 bng 50 150 50 0 empty downphrase empty 17 7 0 10 -262144
 -1 -1;
 #X obj 6 189 cnv 15 200 16 empty empty empty 20 12 0 14 -1 -66577 0
 ;
 #X obj 215 185 hradio 100 1 0 2 empty _r_phrase empty 0 -8 0 10 -262144
 -1 -1 0;
-#X obj 215 85 hradio 33 1 0 6 empty _r_measure empty 0 -8 0 10 -262144
--1 -1 5;
+#X obj 215 85 hradio 100 1 0 2 empty _r_measure empty 0 -8 0 10 -262144
+-1 -1 1;
 #X obj 215 -14 hradio 100 1 0 2 empty _r_beat empty 0 -8 0 10 -262144
--1 -1 0;
+-1 -1 1;
 #X floatatom 67 48 1 0 0 0 - beat_position NULL2gj3if93;
 #X floatatom 67 169 1 0 0 0 - measure_position NULL2gj3if93;
 #X floatatom 70 280 1 0 0 0 - phrase_position NULL2gj3if93;

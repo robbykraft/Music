@@ -1,28 +1,31 @@
 #N canvas 5 23 450 300 10;
 #X obj 146 133 bng 150 50 10 0 empty beat empty 17 7 0 10 -262144 -1
 -1;
-#N canvas 255 62 450 300 guts 0;
-#X obj 37 79 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
-;
+#N canvas 471 258 450 300 guts 0;
+#X obj 103 101 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
 #X obj 44 209 dac~;
-#X obj 43 160 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 43 160 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 47 178 *~;
-#X msg 62 52 1;
-#X obj 54 23 loadbang;
-#X obj 239 123 metro;
+#X msg 104 50 1;
+#X obj 115 11 loadbang;
+#X obj 233 120 metro;
 #X obj 265 94 + 200;
 #X obj 262 66 * 2000;
-#X obj 185 7 r _tempo_bpm;
+#X obj 220 7 r _tempo_bpm;
 #X floatatom 285 123 5 0 0 0 - - -;
 #X obj 270 219 s _beat;
-#X obj 132 77 s _set_tempo_bpm;
-#X msg 116 53 0.15;
+#X obj 152 76 s _set_tempo_bpm;
+#X msg 149 52 0.15;
 #X obj 64 161 tgl 15 0 empty _click_track empty 17 7 0 10 -262144 -1
 -1 0 1;
 #X msg 122 217 \; pd dsp \$1;
-#X obj 244 166 s beat;
+#X obj 244 189 s beat;
 #X text 266 265 "the pulse" is also "beat";
+#X obj 13 46 expr (!$f1);
+#X obj 15 12 r STOP_BEAT;
+#X obj 237 160 f;
 #X connect 0 0 6 0;
 #X connect 2 0 3 0;
 #X connect 3 0 1 0;
@@ -31,17 +34,21 @@
 #X connect 5 0 4 0;
 #X connect 5 0 13 0;
 #X connect 6 0 2 0;
-#X connect 6 0 16 0;
+#X connect 6 0 20 0;
 #X connect 7 0 6 1;
 #X connect 7 0 10 0;
+#X connect 7 0 20 1;
 #X connect 8 0 7 0;
 #X connect 9 0 8 0;
 #X connect 13 0 12 0;
 #X connect 14 0 3 1;
 #X connect 14 0 15 0;
+#X connect 18 0 0 0;
+#X connect 19 0 18 0;
+#X connect 20 0 16 0;
 #X restore 385 275 pd guts;
 #X obj 16 15 hsl 420 50 2 8e-05 1 0 _tempo_bpm _set_tempo_bpm empty
--2 -8 0 10 -1 -262144 -1 17500 1;
+-2 -8 0 10 -1 -262144 -1 10718 1;
 #X text 77 98 andante;
 #X text 49 80 adagio;
 #X text 104 78 allegro;
@@ -54,3 +61,5 @@
 -1 0 1;
 #X text 5 66 grave;
 #X msg 336 198 \; BEAT_RESET 0;
+#X obj 24 230 tgl 15 0 STOP_BEAT empty STOP 17 7 0 10 -262144 -1 -1
+0 1;

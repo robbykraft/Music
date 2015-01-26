@@ -2,7 +2,7 @@
 ===
 # music
 ===
-# apps
+# modules
 ===
 
 ===
@@ -22,6 +22,7 @@
 
 ### responds to
 `bang` beat
+
 `bang` MASTER_RESET, PULSE_RESET
 
 # sector
