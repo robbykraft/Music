@@ -10,7 +10,15 @@
 ===
 
 # beat (♥beat)
-### returns `bang` beat
+### returns 
+`int` beat (sent on every beat, # of milliseconds between beats)
+
+`int` bpm (sent on tempo change, beats per minute)
+
+### responds to
+`bool` _click_track (activates dsp, makes a speaker noise on the beat)
+
+`bool` STOP_BEAT (disables beat metronome entirely)
 
 # phrasing
 ### returns
