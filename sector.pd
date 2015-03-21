@@ -1,15 +1,15 @@
-#N canvas 420 23 450 300 10;
+#N canvas 557 238 450 300 10;
 #X obj 17 17 vradio 30 1 0 4 _sector_input_unit _r_sector_input_unit
 empty 0 -8 0 10 -262144 -1 -1 0;
 #X text 53 23 beat;
 #X text 54 54 measure;
 #X text 54 83 phrase;
-#X obj 168 33 hradio 15 1 0 8 _sector_radio_in _r_sector_radio_in empty
+#X obj 168 71 hradio 15 1 0 8 _sector_radio_in _r_sector_radio_in empty
 0 -8 0 10 -262144 -1 -1 2;
-#X text 172 16 2 3;
-#X text 201 16 4 5;
-#X text 233 16 6 7;
-#X text 263 16 8 9;
+#X text 172 54 2 3;
+#X text 201 54 4 5;
+#X text 233 54 6 7;
+#X text 263 54 8 9;
 #N canvas 143 182 456 482 guts 0;
 #X obj 98 21 + 2;
 #X msg 187 46 number \$1;
@@ -103,8 +103,8 @@ empty 0 -8 0 10 -262144 -1 -1 0;
 #X connect 38 4 39 0;
 #X connect 39 0 8 1;
 #X restore 369 267 pd guts;
-#X obj 126 66 hradio 50 1 0 4 empty _r_sector_length empty 0 -8 0 10
--262144 -1 -1 1;
+#X obj 126 104 hradio 50 1 0 4 empty _r_sector_length empty 0 -8 0
+10 -262144 -1 -1 0;
 #N canvas 545 199 450 465 feed_guts 0;
 #X floatatom 161 194 8 0 0 0 - - -;
 #X obj 147 146 t b b;
@@ -250,7 +250,7 @@ empty 0 -8 0 10 -262144 -1 -1 0;
 #X connect 51 0 52 0;
 #X connect 53 0 0 0;
 #X restore 16 143 pd feed_guts;
-#X floatatom 293 33 5 0 0 0 - _sector_length NULL593tosoTe3;
+#X floatatom 293 71 5 0 0 0 - _sector_length NULL593tosoTe3;
 #X obj 17 248 random 7;
 #X obj 17 269 s _r_sector_radio_in;
 #X obj 17 208 r _just_before;
@@ -518,6 +518,8 @@ empty 0 -8 0 10 -262144 -1 -1 0;
 #X connect 68 0 4 1;
 #X connect 69 0 3 1;
 #X restore 222 225 pd feed_manager;
+#X text 175 273 returns: BANG sector_beat;
+#X text 124 8 responds to: beat \, measure \, phrase;
 #X connect 13 0 14 0;
 #X connect 15 0 16 0;
 #X connect 16 0 13 0;
