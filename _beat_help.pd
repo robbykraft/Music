@@ -1,0 +1,11 @@
+#N canvas 354 301 450 300 10;
+#X obj 121 121 _beat;
+#X floatatom 133 165 5 0 0 0 - - -;
+#X obj 110 165 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 142 94 120;
+#X text 171 94 beats per minute;
+#X text 173 165 milliseconds;
+#X connect 0 0 1 0;
+#X connect 0 0 2 0;
+#X connect 3 0 0 0;
