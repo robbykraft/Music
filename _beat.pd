@@ -1,0 +1,67 @@
+#N canvas 482 252 450 300 10;
+#X obj 14 10 hsl 420 15 2 0.0008 1 0 empty empty empty -2 -8 0 10 -1
+-262144 -1 32633 1;
+#X text 151 38 andante;
+#X text 133 24 adagio;
+#X text 53 38 grave;
+#X obj 205 169 tgl 35 0 STOP_BEAT empty STOP 5 42 0 10 -262144 -1 -1
+1 1;
+#X text 204 38 allegro;
+#X text 270 38 presto;
+#X text 3 25 larghissimo;
+#X text 94 24 lento;
+#X text 108 37 largo;
+#X text 179 24 moderato;
+#X text 238 24 vivace;
+#X text 296 24 prestissimo;
+#X obj 202 272 outlet;
+#X obj 131 103 cnv 15 188 12 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X obj 278 104 cnv 15 36 20 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X floatatom 280 106 5 0 0 0 - - NULL50f9f9fjk3;
+#X obj 205 234 bng 35 50 10 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 136 105 cnv 15 136 19 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 140 107 hsl 128 15 2 0.0008 1 0 empty empty empty -2 -8 0 10
+-262144 -1 -1 9891 1;
+#X msg 17 94 1;
+#X obj 28 73 loadbang;
+#X obj 13 165 * 2000;
+#X obj 13 185 + 100;
+#X obj 13 147 expr sqrt($f1);
+#X floatatom 43 127 8 0 0 0 - - -;
+#X msg 55 94 0.04;
+#X obj 55 262 f;
+#X obj 13 209 expr (60000/$f1);
+#X obj 55 241 metro;
+#X obj 13 126 f;
+#X obj 258 140 inlet;
+#X obj 258 180 expr ($f1 * $f1);
+#X obj 258 160 expr ((60000/$f1)-100)/2000;
+#X connect 4 0 29 0;
+#X connect 19 0 0 0;
+#X connect 19 0 30 0;
+#X connect 20 0 29 0;
+#X connect 20 0 4 0;
+#X connect 21 0 20 0;
+#X connect 21 0 26 0;
+#X connect 22 0 23 0;
+#X connect 23 0 27 1;
+#X connect 23 0 28 0;
+#X connect 23 0 29 1;
+#X connect 24 0 22 0;
+#X connect 26 0 19 0;
+#X connect 26 0 30 0;
+#X connect 27 0 13 0;
+#X connect 27 0 17 0;
+#X connect 28 0 16 0;
+#X connect 29 0 27 0;
+#X connect 30 0 24 0;
+#X connect 30 0 25 0;
+#X connect 31 0 33 0;
+#X connect 32 0 19 0;
+#X connect 32 0 30 0;
+#X connect 33 0 32 0;
+#X coords 0 -1 1 1 190 30 1 130 100;

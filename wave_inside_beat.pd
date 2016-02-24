@@ -1,0 +1,27 @@
+#N canvas 577 93 450 300 10;
+#X obj 134 -9 _beat;
+#X obj 166 53 line;
+#X msg 166 33 1 \, 0 \$1;
+#X obj 175 108 vsl 32 96 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 6165 1;
+#X obj 203 210 _gt;
+#X obj 227 108 vsl 32 96 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 312 1;
+#X obj 185 233 hradio 32 1 0 2 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X obj 242 28 t b;
+#X obj 268 48 + 1;
+#X obj 242 48 f;
+#X obj 242 69 expr (sin($f1*.003)+1)*.5;
+#X connect 0 0 2 0;
+#X connect 1 0 3 0;
+#X connect 1 0 7 0;
+#X connect 2 0 1 0;
+#X connect 3 0 4 0;
+#X connect 4 0 6 0;
+#X connect 5 0 4 1;
+#X connect 7 0 9 0;
+#X connect 8 0 9 1;
+#X connect 9 0 8 0;
+#X connect 9 0 10 0;
+#X connect 10 0 5 0;
